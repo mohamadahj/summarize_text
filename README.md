@@ -14,35 +14,35 @@ This project implements a robust and scalable text summarization pipeline levera
 
 ### 🥈 Silver Layer: Data Cleaning and Preprocessing
  - Purpose:
- -- Clean and structure raw data for reliable downstream processing.
- -- Transformations applied:
- --- Duplicate removal
- --- Text normalization (lowercasing, special character removal, whitespace trimming)
- --- Conversion of ID column to integer type
- --- Handling null or empty values
+   * Clean and structure raw data for reliable downstream processing.
+ - Transformations applied:
+   * Duplicate removal
+   * Text normalization (lowercasing, special character removal, whitespace trimming)
+   * Conversion of ID column to integer type
+   * Handling null or empty values
 
 ### 🥇 Gold Layer: AI-Powered Text Summarization (Azure OpenAI GPT-4)
  - Purpose:
- -- Generate concise, high-quality summaries from cleaned text using Azure OpenAI.
- -- Implementation highlights:
- --- Robust error handling with exponential backoff
- --- Batch processing using mapInPandas for scalability
- --- Secure API key retrieval from Databricks Secrets
+   * Generate concise, high-quality summaries from cleaned text using Azure OpenAI.
+ - Implementation highlights:
+   * Robust error handling with exponential backoff
+   * Batch processing using mapInPandas for scalability
+   * Secure API key retrieval from Databricks Secrets
 
 ## 📦 Saving Data to Azure Blob Storage
  - Purpose:
- -- Persist the summarized data securely for further use.
- -- Details:
- --- Data stored in Parquet format for efficient analytics.
+   * Persist the summarized data securely for further use.
+ - Details:
+   * Data stored in Parquet format for efficient analytics.
 
 ## 🌐 Azure Function API for Data Retrieval
  - Purpose:
- -- Provide a simple, scalable API endpoint to fetch summarized data.
- -- Technology:
- --- Python HTTP-triggered Azure Function returning structured JSON.
+   * Provide a simple, scalable API endpoint to fetch summarized data.
+ - Technology:
+   * Python HTTP-triggered Azure Function returning structured JSON.
 ## 🔄 Consuming Azure Function API from Databricks
  - Purpose:
- -- Demonstrate retrieval of summarized data back into Databricks.
+   * Demonstrate retrieval of summarized data back into Databricks.
 ## 🚧 Potential Improvements
  - Implement detailed monitoring (Azure Monitor).
  - Automate deployments (CI/CD) with Azure DevOps or GitHub Actions.
