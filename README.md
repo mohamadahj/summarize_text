@@ -7,10 +7,10 @@ This project implements a robust and scalable text summarization pipeline levera
 ## 📚 Pipeline Structure
 ### 🟤 Bronze Layer: Raw Data Ingestion
  - Purpose:
-  * Initial ingestion of raw text data from CSV into Spark DataFrames.
+   * Initial ingestion of raw text data from CSV into Spark DataFrames.
  - Implementation:
-  * Reads CSV file into Spark DataFrame.
-  * No transformation; raw data storage only.
+   * Reads CSV file into Spark DataFrame.
+   * No transformation; raw data storage only.
 
 ### 🥈 Silver Layer: Data Cleaning and Preprocessing
  - Purpose:
